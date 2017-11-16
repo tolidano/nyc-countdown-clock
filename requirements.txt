@@ -1,0 +1,10 @@
+future>=0.16
+PyYAML>=3.10
+gtfs-realtime-bindings>=0.0.5
+requests>=2.18.4
+
+mock>=1.0.1
+pylint>=1.7.2
+pytest>=3.2.1
+pytest-cov>=2.5.0
+tox>=2.8.0

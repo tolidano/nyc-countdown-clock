@@ -1,0 +1,5 @@
+# Visit datamine.mta.info/user/ to get a key
+mta_feed_api_key: YOUR_MTA_FEED_API_KEY
+
+# Visit https://docs.google.com/forms/d/e/1FAIpQLSfGUZA6h4eHd2-ImaK5Q_I5Gb7C3UEP5vYDALyGd7r3h08YKg/viewform?hl=en&formkey=dG9kcGIxRFpSS0NhQWM4UjA0V0VkNGc6MQ#gid=0 to get a key
+mta_bus_time_api_key: YOUR_MTA_BUS_TIME_API_KEY
