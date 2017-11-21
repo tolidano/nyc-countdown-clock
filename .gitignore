@@ -17,3 +17,9 @@ docs/cov
 docs/doctrees
 docs/html
 config.yaml
+
+data/subway
+data/bus
+data/busco
+data/mnr
+lirr_gtfs.json

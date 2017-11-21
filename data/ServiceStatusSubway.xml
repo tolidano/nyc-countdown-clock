@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><Siri xmlns:ns2="http://www.ifopt.org.uk/acsb" xmlns="http://www.siri.org.uk/siri" xmlns:ns4="http://datex2.eu/schema/1_0/1_0" xmlns:ns3="http://www.ifopt.org.uk/ifopt"><ServiceDelivery><ResponseTimestamp>2017-11-21T09:17:02.8800237-05:00</ResponseTimestamp><SituationExchangeDelivery><ResponseTimestamp>2017-11-21T09:17:02.8800237-05:00</ResponseTimestamp><Status>true</Status><Situations>
+  <PtSituationElement>
+    <CreationTime>2017-11-20T00:00:00-05:00</CreationTime>
+    <SituationNumber>
+                  MTA NYCT_173504</SituationNumber>
+    <PublicationWindow>
+      <StartTime>2017-11-20T00:00:00-05:00</StartTime>
+      <EndTime>2017-11-22T23:59:00-05:00</EndTime>
+    </PublicationWindow>
+    <Summary xml:lang="EN">SCHEDULED MAINTENANCE  [SIR] Trains board at the St. George-bound platform from Grant City to Great Kills</Summary>
+    <Description xml:lang="EN">SCHEDULED MAINTENANCE  [SIR] Trains board at the St. George-bound platform from Grant City to Great Kills</Description>
+    <LongDescription>&amp;lt;b&amp;gt;&amp;lt;i&amp;gt;SCHEDULED MAINTENANCE&amp;lt;/i&amp;gt;&amp;lt;br clear=left&amp;gt;[SIR] Trains board at the St. George-bound platform from Grant City to Great Kills&amp;lt;/b&amp;gt;Days, 9 AM to 2 PM, Mon to Wed, Nov 20 - 22&amp;lt;br&amp;gt;&amp;lt;br&amp;gt; Boarding change includes &amp;lt;b&amp;gt;Grant City&amp;lt;/b&amp;gt;, &amp;lt;b&amp;gt;New Dorp&amp;lt;/b&amp;gt;, &amp;lt;b&amp;gt;Oakwood Heights&amp;lt;/b&amp;gt;, &amp;lt;b&amp;gt;Bay Terrace &amp;lt;/b&amp;gt;and &amp;lt;br&amp;gt;&amp;lt;b&amp;gt;  Great Kills Stations&amp;lt;/b&amp;gt;.&amp;lt;br&amp;gt;&amp;lt;b&amp;gt;&amp;lt;br&amp;gt;</LongDescription>
+    <Planned>true</Planned>
+    <ReasonName>Planned Work</ReasonName>
+    <MessagePriority>
+                  1
+                </MessagePriority>
+    <Source>
+      <SourceType>directReport</SourceType>
+    </Source>
+    <Affects>
+      <VehicleJourneys>
+        <AffectedVehicleJourney>
+          <LineRef>
+                      MTA NYCT_SI</LineRef>
+          <DirectionRef>1</DirectionRef>
+        </AffectedVehicleJourney>
+      </VehicleJourneys>
+    </Affects>
+    <Consequences>
+      <Consequence>
+        <Condition>altered</Condition>
+        <Severity>undefined</Severity>
+      </Consequence>
+    </Consequences>
+  </PtSituationElement>
+</Situations></SituationExchangeDelivery></ServiceDelivery></Siri>

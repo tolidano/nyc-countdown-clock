@@ -23,8 +23,9 @@ class Clock(object):
         for feed_id in self.feed_ids:
             self.feeds['S' + str(feed_id)] = self.subway_feed_url + str(feed_id)
 
+        # or proto
         self.feeds['LIRR'] = \
-            'https://mnorth.prod.acquia-sites.com/wse/LIRR/gtfsrt/realtime/%KEY%/proto'
+            'https://mnorth.prod.acquia-sites.com/wse/LIRR/gtfsrt/realtime/%KEY%/json'
         self.feeds['MNR'] = \
             'https://mnorth.prod.acquia-sites.com/wse/gtfsrtwebapi/v1/gtfsrt/%KEY%/getfeed'
 

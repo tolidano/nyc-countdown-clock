@@ -4,3 +4,28 @@ Subway Stations (Geospatial) - stations.geojson - https://data.cityofnewyork.us/
 Subway Stations (Non-Geospatial) - stations.json - https://data.cityofnewyork.us/api/views/kk4q-3rt2/rows.json?accessType=DOWNLOAD
 Subway Lines (Geospatial) - lines.geojson - https://data.cityofnewyork.us/api/geospatial/3qz8-muuu?method=export&format=GeoJSON
 Subway Lines (Non-Geospatial) - lines.json - https://data.cityofnewyork.us/api/views/s7zz-qmyz/rows.json?accessType=DOWNLOAD
+Service Status - serviceStatus.txt - http://web.mta.info/status/serviceStatus.txt
+Line Service Status - ServiceStatusSubway.xml - http://web.mta.info/status/ServiceStatusSubway.xml
+Bus Service Status - ServiceStatusBus.xml - http://web.mta.info/status/ServiceStatusBus.xml
+Elevator / Escalator Listing - allequipments.aspx.xml - http://advisory.mtanyct.info/eedevwebsvc/allequipments.aspx
+Elevator / Escalator Status - nyct_ene.xml - http://web.mta.info/developers/data/nyct/nyct_ene.xml
+Station List - Stations.csv - http://web.mta.info/developers/data/nyct/subway/Stations.csv
+Station Complexes - StationComplexes.csv - http://web.mta.info/developers/data/nyct/subway/StationComplexes.csv
+Subway Entrances - StationEntrances.csv - http://web.mta.info/developers/data/nyct/subway/StationEntrances.csv
+
+Colors - colors.csv - http://web.mta.info/developers/data/colors.csv
+
+These files are added to the .gitignore file because they take up 650 MB of space:
+
+LIRR GTFS JSON - lirr_gtfs.json - http://web.mta.info/developers/data/lirr/lirr_gtfs.json
+LIRR Schedule JSON - lirr_gtfs_header.json - http://web.mta.info/developers/data/lirr/lirr_gtfs_header.json
+
+Subway Schedule - subway - http://web.mta.info/developers/data/nyct/subway/google_transit.zip
+Bus Schedule Bronx - bus/bronx - http://web.mta.info/developers/data/nyct/bus/google_transit_bronx.zip
+Bus Schedule Brooklyn - bus/brooklyn - http://web.mta.info/developers/data/nyct/bus/google_transit_brooklyn.zip
+Bus Schedule Manhattan - bus/manhattan - http://web.mta.info/developers/data/nyct/bus/google_transit_manhattan.zip
+Bus Schedule Queens - bus/queens - http://web.mta.info/developers/data/nyct/bus/google_transit_queens.zip
+Bus Schedule Staten Island - bus/staten_island - http://web.mta.info/developers/data/nyct/bus/google_transit_staten_island.zip
+MNR Schedule - mnr - http://web.mta.info/developers/data/mnr/google_transit.zip
+Bus Co Schedule - busco - http://web.mta.info/developers/data/busco/google_transit.zip
+
