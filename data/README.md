@@ -14,16 +14,17 @@ Station Complexes - StationComplexes.csv - http://web.mta.info/developers/data/n
 
 Subway Lines (Geospatial) - lines.geojson - https://data.cityofnewyork.us/api/geospatial/3qz8-muuu?method=export&format=GeoJSON
 Subway Lines (Non-Geospatial) - lines.json - https://data.cityofnewyork.us/api/views/s7zz-qmyz/rows.json?accessType=DOWNLOAD
-Line Service Status - ServiceStatusSubway.xml - http://web.mta.info/status/ServiceStatusSubway.xml
-
-Service Status - serviceStatus.txt - http://web.mta.info/status/serviceStatus.txt
 
 Elevator / Escalator Listing - allequipments.aspx.xml - http://advisory.mtanyct.info/eedevwebsvc/allequipments.aspx
-Elevator / Escalator Status - nyct_ene.xml - http://web.mta.info/developers/data/nyct/nyct_ene.xml
-
-Bus Service Status - ServiceStatusBus.xml - http://web.mta.info/status/ServiceStatusBus.xml
 
 Colors - colors.csv - http://web.mta.info/developers/data/colors.csv
+
+These files change on a regular basis and should be pulled frequently, as opposed to the rest, which can be pulled once per day or less:
+
+Bus Service Status - ServiceStatusBus.xml - http://web.mta.info/status/ServiceStatusBus.xml
+Service Status - serviceStatus.txt - http://web.mta.info/status/serviceStatus.txt
+Line Service Status - ServiceStatusSubway.xml - http://web.mta.info/status/ServiceStatusSubway.xml
+Elevator / Escalator Status - nyct_ene.xml - http://web.mta.info/developers/data/nyct/nyct_ene.xml
 
 These files are added to the .gitignore file because they take up 650 MB of space:
 
@@ -41,4 +42,3 @@ Bus Schedule Staten Island - bus/staten_island - http://web.mta.info/developers/
 MNR Schedule - mnr - http://web.mta.info/developers/data/mnr/google_transit.zip
 
 Bus Co Schedule - busco - http://web.mta.info/developers/data/busco/google_transit.zip
-
