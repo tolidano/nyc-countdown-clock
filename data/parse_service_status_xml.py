@@ -60,23 +60,23 @@ def main(xml_file):
         source_type = situation.find('Source').find('SourceType').text
         affects = []
         for journey in situation.find('Affects').find('VehicleJourneys'):
-            affects.append({'LineRef': journey.find('LineRef').text, 'DirectionRef': journey.find('DirectionRef').text})
+            affects.append({'line': journey.find('LineRef').text, 'direction': journey.find('DirectionRef').text})
         consequences = []
         for consequence in situation.find('Consequences'):
-            consequences.append({'Condition': consequence.find('Condition').text, 'Severity': consequence.find('Severity').text})
+            consequences.append({'condition': consequence.find('Condition').text, 'severity': consequence.find('Severity').text})
         situations.append({
-            'CreationTime': creation_time,
-            'SituationNumber': situation_number,
-            'StartTime': start_time,
-            'EndTime': end_time,
-            'Summary': summary,
-            'Description': description,
-            'LongDescription': long_description,
-            'Planned': planned,
-            'Reason': reason,
-            'SourceType': source_type,
-            'Journeys': affects,
-            'Consequences': consequences,
+            'creation_time': creation_time,
+            'situation_number': situation_number,
+            'start_time': start_time,
+            'end_time': end_time,
+            'summary': summary,
+            'description': description,
+            'long_description': long_description,
+            'planned': planned,
+            'reason': reason,
+            'source_type': source_type,
+            'journeys': affects,
+            'consequences': consequences,
             });
     print(situations)
 
