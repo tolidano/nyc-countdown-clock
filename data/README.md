@@ -3,7 +3,6 @@ Note that these URLs are duplicated into the files.csv file for use with the dow
 
 These files are kept in the repo because they are small and provide a great sample dataset to work with:
 
-Subway Entrances (Non-Geospatial) - entrances.json - https://data.cityofnewyork.us/api/views/he7q-3hwy/rows.json?accessType=DOWNLOAD
 Subway Entrances (Geospatial) - entrances.geojson - https://data.cityofnewyork.us/api/geospatial/drex-xx56?method=export&format=GeoJSON
 Subway Entrances - StationEntrances.csv - http://web.mta.info/developers/data/nyct/subway/StationEntrances.csv
 
