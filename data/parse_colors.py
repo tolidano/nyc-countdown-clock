@@ -1,4 +1,5 @@
 import csv
+import json
 
 
 def main():
@@ -19,7 +20,7 @@ def main():
                         })
     except IOError:
         print('colors.csv not found.')
-    print(colors)
+    print(json.dumps(colors, indent=1))
 
 
 if __name__ == '__main__':

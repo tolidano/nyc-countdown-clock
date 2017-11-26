@@ -36,7 +36,7 @@ def main():
                     })
     except IOError:
         print('entrances.geojson not found.')
-    print(entrances)
+    print(json.dumps(entrances, indent=1))
 
 
 if __name__ == '__main__':

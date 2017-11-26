@@ -1,4 +1,5 @@
 from defusedxml import ElementTree
+import json
 
 
 def main():
@@ -38,7 +39,7 @@ def main():
             'serving': serving,
             'ada': ada,
             })
-    print(equipment_list)
+    print(json.dumps(equipment_list, indent=1))
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 import csv
+import json
 
 
 def main():
@@ -13,7 +14,7 @@ def main():
                 header = True
     except IOError:
         print('StationComplexes.csv not found.')
-    print(lines)
+    print(json.dumps(lines, indent=1))
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 import csv
+import json
 
 
 def main():
@@ -48,11 +49,12 @@ def main():
                         'corner': line[27],
                         'latitude': line[28],
                         'longitude': line[29],
+                        'geojson': line[25] + ' & ' + line[26] + ' at ' + line[27] + ' corner'
                         })
                 header = True
     except IOError:
         print('StationEntrances.csv not found.')
-    print(stations)
+    print(json.dumps(stations, indent=1))
 
 
 if __name__ == '__main__':

@@ -1,5 +1,6 @@
 import argparse
 from defusedxml import ElementTree
+import json
 import os
 import sys
 
@@ -78,7 +79,7 @@ def main(xml_file):
             'journeys': affects,
             'consequences': consequences,
             });
-    print(situations)
+    print(json.dumps(situations, indent=1))
 
 
 if __name__ == '__main__':
