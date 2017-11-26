@@ -7,12 +7,10 @@ Subway Entrances (Geospatial) - entrances.geojson - https://data.cityofnewyork.u
 Subway Entrances - StationEntrances.csv - http://web.mta.info/developers/data/nyct/subway/StationEntrances.csv
 
 Subway Stations (Geospatial) - stations.geojson - https://data.cityofnewyork.us/api/geospatial/arq3-7z49?method=export&format=GeoJSON
-Subway Stations (Non-Geospatial) - stations.json - https://data.cityofnewyork.us/api/views/kk4q-3rt2/rows.json?accessType=DOWNLOAD
 Station List - Stations.csv - http://web.mta.info/developers/data/nyct/subway/Stations.csv
 Station Complexes - StationComplexes.csv - http://web.mta.info/developers/data/nyct/subway/StationComplexes.csv
 
 Subway Lines (Geospatial) - lines.geojson - https://data.cityofnewyork.us/api/geospatial/3qz8-muuu?method=export&format=GeoJSON
-Subway Lines (Non-Geospatial) - lines.json - https://data.cityofnewyork.us/api/views/s7zz-qmyz/rows.json?accessType=DOWNLOAD
 
 Elevator / Escalator Listing - allequipments.aspx.xml - http://advisory.mtanyct.info/eedevwebsvc/allequipments.aspx
 
@@ -28,7 +26,6 @@ Elevator / Escalator Status - nyct_ene.xml - http://web.mta.info/developers/data
 These files are added to the .gitignore file because they take up 650 MB of space:
 
 LIRR GTFS JSON - lirr_gtfs.json - http://web.mta.info/developers/data/lirr/lirr_gtfs.json
-LIRR Schedule JSON - lirr_gtfs_header.json - http://web.mta.info/developers/data/lirr/lirr_gtfs_header.json
 
 Subway Schedule - subway - http://web.mta.info/developers/data/nyct/subway/google_transit.zip
 
