@@ -18,9 +18,10 @@ def main():
     Shapes - the shapes of the routes
         There appears to be some sort of data duplication here and there is another copy of the trips as well
     Times - arrival and departure times at each stop
-    Dates - service dates and exceptions
+    Dates - service date exceptions
+    Calendar - service IDs
     """
-    lirr = {'stops': {}, 'routes': {}, 'trips': {}, 'shapes': {}, 'times': {}, 'dates': {}}
+    lirr = {'stops': {}, 'routes': {}, 'trips': {}, 'shapes': {}, 'times': {}, 'dates': {}, 'calendar': []}
     try:
         with open('lirr_gtfs.json', 'r') as data:
             contents = json.load(data)
