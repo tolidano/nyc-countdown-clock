@@ -29,13 +29,6 @@ class Clock(object):
         self.feeds['MNR'] = \
             'https://mnorth.prod.acquia-sites.com/wse/gtfsrtwebapi/v1/gtfsrt/%KEY%/getfeed'
 
-        self.subway_lines = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'J', 'L', 'M', 'N', 'Q', 'R', 'S', 'T', 'W', 'Z',
-                             '1', '2', '3', '4', '5', '6', '6X', '7', 'SS']
-        self.bus_lines = ['Q32', 'Q60', 'Q101', 'Q102', 'M5X', 'BX1', 'BX2']
-        self.train_branches = ['Far Rockaway', 'Babylon', 'Port Washington', 'Speonk', 'Long Beach', 'Hempstead',
-                               'West Hempstead', 'Stonybrook', ]
-        self.lines = {}
-
         self.mta_feed_api_key = 'Unknown'
         self.mta_bus_time_api_key = 'Unknown'
         if not path.exists(config_file):
