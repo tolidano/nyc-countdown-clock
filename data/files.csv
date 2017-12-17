@@ -1,20 +1,20 @@
-Elevator / Escalator Status,nyct_ene.xml,http://web.mta.info/developers/data/nyct/nyct_ene.xml
-Line Service Status,ServiceStatusSubway.xml,http://web.mta.info/status/ServiceStatusSubway.xml
-Bus Service Status,ServiceStatusBus.xml,http://web.mta.info/status/ServiceStatusBus.xml
-Subway Entrances (Geospatial),entrances.geojson,https://data.cityofnewyork.us/api/geospatial/drex-xx56?method=export&format=GeoJSON
-Subway Entrances,StationEntrances.csv,http://web.mta.info/developers/data/nyct/subway/StationEntrances.csv
-Subway Stations (Geospatial),stations.geojson,https://data.cityofnewyork.us/api/geospatial/arq3-7z49?method=export&format=GeoJSON
-Station List,Stations.csv,http://web.mta.info/developers/data/nyct/subway/Stations.csv
-Station Complexes,StationComplexes.csv,http://web.mta.info/developers/data/nyct/subway/StationComplexes.csv
-Subway Lines (Geospatial),lines.geojson,https://data.cityofnewyork.us/api/geospatial/3qz8-muuu?method=export&format=GeoJSON
-Elevator / Escalator Listing,allequipments.aspx.xml,http://advisory.mtanyct.info/eedevwebsvc/allequipments.aspx
-Colors,colors.csv,http://web.mta.info/developers/data/colors.csv
-LIRR GTFS JSON,lirr_gtfs.json,http://web.mta.info/developers/data/lirr/lirr_gtfs.json
-Subway Schedule,subway,http://web.mta.info/developers/data/nyct/subway/google_transit.zip
-Bus Schedule Bronx,bus/bronx,http://web.mta.info/developers/data/nyct/bus/google_transit_bronx.zip
-Bus Schedule Brooklyn,bus/brooklyn,http://web.mta.info/developers/data/nyct/bus/google_transit_brooklyn.zip
-Bus Schedule Manhattan,bus/manhattan,http://web.mta.info/developers/data/nyct/bus/google_transit_manhattan.zip
-Bus Schedule Queens,bus/queens,http://web.mta.info/developers/data/nyct/bus/google_transit_queens.zip
-Bus Schedule Staten Island,bus/staten_island,http://web.mta.info/developers/data/nyct/bus/google_transit_staten_island.zip
-MNR Schedule,mnr,http://web.mta.info/developers/data/mnr/google_transit.zip
-Bus Co Schedule,busco,http://web.mta.info/developers/data/busco/google_transit.zip
+Elevator / Escalator Status,nyct_ene.xml,http://web.mta.info/developers/data/nyct/nyct_ene.xml,status
+Line Service Status,ServiceStatusSubway.xml,http://web.mta.info/status/ServiceStatusSubway.xml,status
+Bus Service Status,ServiceStatusBus.xml,http://web.mta.info/status/ServiceStatusBus.xml,status
+Subway Entrances (Geospatial),entrances.geojson,https://data.cityofnewyork.us/api/geospatial/drex-xx56?method=export&format=GeoJSON,geography
+Subway Entrances,StationEntrances.csv,http://web.mta.info/developers/data/nyct/subway/StationEntrances.csv,geography
+Subway Stations (Geospatial),stations.geojson,https://data.cityofnewyork.us/api/geospatial/arq3-7z49?method=export&format=GeoJSON,geography
+Station List,Stations.csv,http://web.mta.info/developers/data/nyct/subway/Stations.csv,geography
+Station Complexes,StationComplexes.csv,http://web.mta.info/developers/data/nyct/subway/StationComplexes.csv,listings
+Subway Lines (Geospatial),lines.geojson,https://data.cityofnewyork.us/api/geospatial/3qz8-muuu?method=export&format=GeoJSON,geography
+Elevator / Escalator Listing,allequipments.aspx.xml,http://advisory.mtanyct.info/eedevwebsvc/allequipments.aspx,listings
+Colors,colors.csv,http://web.mta.info/developers/data/colors.csv,listings
+LIRR GTFS JSON,lirr_gtfs.json,http://web.mta.info/developers/data/lirr/lirr_gtfs.json,schedules
+Subway Schedule,subway,http://web.mta.info/developers/data/nyct/subway/google_transit.zip,schedules
+Bus Schedule Bronx,bus/bronx,http://web.mta.info/developers/data/nyct/bus/google_transit_bronx.zip,schedules
+Bus Schedule Brooklyn,bus/brooklyn,http://web.mta.info/developers/data/nyct/bus/google_transit_brooklyn.zip,schedules
+Bus Schedule Manhattan,bus/manhattan,http://web.mta.info/developers/data/nyct/bus/google_transit_manhattan.zip,schedules
+Bus Schedule Queens,bus/queens,http://web.mta.info/developers/data/nyct/bus/google_transit_queens.zip,schedules
+Bus Schedule Staten Island,bus/staten_island,http://web.mta.info/developers/data/nyct/bus/google_transit_staten_island.zip,schedules
+MNR Schedule,mnr,http://web.mta.info/developers/data/mnr/google_transit.zip,schedules
+Bus Co Schedule,busco,http://web.mta.info/developers/data/busco/google_transit.zip,schedules

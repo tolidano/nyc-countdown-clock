@@ -1,3 +1,4 @@
+import argparse
 import csv
 import os
 import requests
@@ -8,18 +9,19 @@ from requests.exceptions import ConnectionError
 _ONE_MEGABYTE = 1024 * 1024
 
 
-def main():
+def main(files):
     lines = []
     try:
         with open('files.csv', 'r') as files:
             contents = csv.reader(files)
             for line in contents:
-                lines.append({'name': line[0], 'local': line[1], 'remote': line[2]})
+                lines.append({'name': line[0], 'local': line[1], 'remote': line[2], 'type': line[3]})
     except IOError:
         print('files.csv not found.')
     if lines:
         for line in lines:
-            download(line['name'], line['local'], line['remote'])
+            if files == 'all' or files == line['type']:
+                download(line['name'], line['local'], line['remote'])
 
 
 def download(name, local_path, server_path):
@@ -55,4 +57,7 @@ def download(name, local_path, server_path):
 
 
 if __name__ == '__main__':
-    main()
+    PARSER = argparse.ArgumentParser()
+    PARSER.add_argument('files', help='Either all, status, geography, listings, or schedules', default='status')
+    ARGS = PARSER.parse_args()
+    main(ARGS.files)
