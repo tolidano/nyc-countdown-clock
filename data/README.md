@@ -19,7 +19,6 @@ Colors - colors.csv - http://web.mta.info/developers/data/colors.csv
 These files change on a regular basis and should be pulled frequently, as opposed to the rest, which can be pulled once per day or less:
 
 Bus Service Status - ServiceStatusBus.xml - http://web.mta.info/status/ServiceStatusBus.xml
-Service Status - serviceStatus.txt - http://web.mta.info/status/serviceStatus.txt
 Line Service Status - ServiceStatusSubway.xml - http://web.mta.info/status/ServiceStatusSubway.xml
 Elevator / Escalator Status - nyct_ene.xml - http://web.mta.info/developers/data/nyct/nyct_ene.xml
 

@@ -29,7 +29,7 @@ def main():
             for stop in gtfs['stops']:
                 data = stop['stop']
                 lirr['stops'][data['stop_id']] = {
-                    'id': data['stop_id'],
+                    'stop_id': data['stop_id'],
                     'name': data['stop_name'],
                     'latitude': data['stop_lat'],
                     'longitude': data['stop_lon'],
@@ -37,7 +37,7 @@ def main():
             for route in gtfs['routes']:
                 data = route['route']
                 lirr['routes'][data['route_id']] = {
-                    'id': data['route_id'],
+                    'route_id': data['route_id'],
                     'short_name': data['route_short_name'],
                     'name': data['route_long_name'],
                     'type': data['route_type'], # appears to always be 2
@@ -50,7 +50,7 @@ def main():
                 if data['direction_id'] == '1':
                     direction = 'W'
                 lirr['trips'][data['trip_id']] = {
-                    'id': data['trip_id'],
+                    'trip_id': data['trip_id'],
                     'route_id': data['route_id'],
                     'service_id': data['service_id'],
                     'sign': data['trip_headsign'],
@@ -66,7 +66,7 @@ def main():
                         if data['direction_id'] == '1':
                             direction = 'W'
                         lirr['trips'][data['trip_id']] = {
-                            'id': data['trip_id'],
+                            'trip_id': data['trip_id'],
                             'route_id': data['route_id'],
                             'service_id': data['service_id'],
                             'sign': data['trip_headsign'],
@@ -81,7 +81,7 @@ def main():
                     if oid not in lirr['shapes']:
                         lirr['shapes'][oid] = []
                     lirr['shapes'][oid].append({
-                        'id': oid,
+                        'shape_id': oid,
                         'latitude': data['shape_pt_lat'],
                         'longitude': data['shape_pt_lon'],
                         'sequence': data['shape_pt_sequence'],

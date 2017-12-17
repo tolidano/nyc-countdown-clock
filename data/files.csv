@@ -1,6 +1,5 @@
 Elevator / Escalator Status,nyct_ene.xml,http://web.mta.info/developers/data/nyct/nyct_ene.xml
 Line Service Status,ServiceStatusSubway.xml,http://web.mta.info/status/ServiceStatusSubway.xml
-Service Status,serviceStatus.txt,http://web.mta.info/status/serviceStatus.txt
 Bus Service Status,ServiceStatusBus.xml,http://web.mta.info/status/ServiceStatusBus.xml
 Subway Entrances (Geospatial),entrances.geojson,https://data.cityofnewyork.us/api/geospatial/drex-xx56?method=export&format=GeoJSON
 Subway Entrances,StationEntrances.csv,http://web.mta.info/developers/data/nyct/subway/StationEntrances.csv
