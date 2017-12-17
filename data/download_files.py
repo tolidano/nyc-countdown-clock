@@ -42,18 +42,10 @@ def download(name, local_path, server_path):
         print('Writing to local path {}'.format(final_path))
         chunks = 0
         with open(final_path, 'wb') as handle:
-            erase = False
             for chunk in response.iter_content(chunk_size=_ONE_MEGABYTE):
                 if chunk:
                     handle.write(chunk)
                     chunks += 1
-                    if chunks % 10 == 0:
-                        if erase:
-                            print('\r', end='')
-                        print('Downloaded {} chunks'.format(chunks), end='')
-                        erase = True
-            if erase:
-                print('')
         print('Finished downloading {} to {}'.format(server_path, final_path))
         if 'zip' in final_path:
             with zipfile.ZipFile(final_path, 'r') as zip_ref:

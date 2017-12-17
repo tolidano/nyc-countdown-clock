@@ -30,15 +30,18 @@ def main():
     etree = ElementTree.parse(xml_file)
     outages = []
     for outage in etree.getroot().iter('outage'):
+        """
+        Everything here is defined in the equipment itself and so this is redundant:
+        equipment_type = outage.find('equipmenttype').text
         station = outage.find('station').text
         borough = outage.find('borough').text
         line = outage.find('trainno').text
-        equipment = outage.find('equipment').text
-        equipment_type = outage.find('equipmenttype').text
         serving = outage.find('serving').text
         ada = False
         if outage.find('ADA').text == 'Y':
-            ada = True
+            ada = True        
+        """
+        identifier = outage.find('equipment').text
         reason = outage.find('reason').text
         upcoming = False
         if outage.find('isupcomingoutage').text == 'Y':
@@ -50,20 +53,23 @@ def main():
         return_date = None
         if outage.find('estimatedreturntoservice').text:
             return_date = outage.find('estimatedreturntoservice').text
-        outages.append({
+        """
+        See above
             'station': station,
             'borough': borough,
             'line': line,
-            'equipment': equipment,
             'type': equipment_type,
             'serving': serving,
             'ada': ada,
+        """
+        outages.append({
+            'identifier': identifier,
             'reason': reason,
             'upcoming': upcoming,
             'maintenance': maintenance,
             'outage_date': outage_date,
             'return_date': return_date,
-            });
+            })
     print(json.dumps(outages, indent=1))
 
 

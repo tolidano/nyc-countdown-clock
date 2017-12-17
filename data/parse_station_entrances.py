@@ -9,7 +9,7 @@ def main():
     Entrance_Type,Entry,Exit_Only,Vending,Staffing,Staff_Hours,ADA,ADA_Notes,Free_Crossover,
     North_South_Street,East_West_Street,Corner,Latitude,Longitude
     """
-    stations = []
+    stations = {}
     station_name = 'NEW'
     header = False
     try:
@@ -18,14 +18,12 @@ def main():
             for line in contents:
                 if header:
                     if station_name != line[2]:
-                        if station_name != 'NEW':
-                            stations.append(station)
                         station_name = line[2]
                         routes = []
-                        for j in range(5,15):
+                        for j in range(5, 15):
                             if line[j]:
                                 routes.append(line[j])
-                        station = {
+                        stations[station_name] = {
                             'division': line[0],
                             'line': line[1],
                             'station_name': station_name,
@@ -34,8 +32,8 @@ def main():
                             'free_crossover': True if line[24] == 'YES' else False,
                             'routes': routes,
                             'entrances': [],
-                            }
-                    station['entrances'].append({
+                        }
+                    stations[station_name]['entrances'].append({
                         'type': line[16],
                         'entry': True if line[17] == 'YES' else False,
                         'exit_only': True if line[18] == 'YES' else False,
@@ -50,7 +48,7 @@ def main():
                         'latitude': line[28],
                         'longitude': line[29],
                         'geojson': line[25] + ' & ' + line[26] + ' at ' + line[27] + ' corner'
-                        })
+                    })
                 header = True
     except IOError:
         print('StationEntrances.csv not found.')

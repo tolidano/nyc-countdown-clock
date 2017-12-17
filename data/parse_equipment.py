@@ -29,7 +29,9 @@ def main():
         identifier = equipment.find('equipmentno').text
         equipment_type = equipment.find('equipmenttype').text
         serving = equipment.find('serving').text
-        ada = equipment.find('ADA').text
+        ada = False
+        if equipment.find('ADA').text == 'Y':
+            ada = True
         equipment_list.append({
             'station': station,
             'borough': borough,
