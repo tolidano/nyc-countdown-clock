@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><Siri xmlns:ns2="http://www.ifopt.org.uk/acsb" xmlns="http://www.siri.org.uk/siri" xmlns:ns4="http://datex2.eu/schema/1_0/1_0" xmlns:ns3="http://www.ifopt.org.uk/ifopt"><ServiceDelivery><ResponseTimestamp>2017-12-16T22:06:02.4052327-05:00</ResponseTimestamp><SituationExchangeDelivery><ResponseTimestamp>2017-12-16T22:06:02.4052327-05:00</ResponseTimestamp><Status>true</Status><Situations>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><Siri xmlns:ns2="http://www.ifopt.org.uk/acsb" xmlns="http://www.siri.org.uk/siri" xmlns:ns4="http://datex2.eu/schema/1_0/1_0" xmlns:ns3="http://www.ifopt.org.uk/ifopt"><ServiceDelivery><ResponseTimestamp>2017-12-16T22:50:02.6662322-05:00</ResponseTimestamp><SituationExchangeDelivery><ResponseTimestamp>2017-12-16T22:50:02.6662322-05:00</ResponseTimestamp><Status>true</Status><Situations>
   <PtSituationElement>
-    <CreationTime>2017-12-16T20:17:56.697-05:00</CreationTime>
+    <CreationTime>2017-12-16T22:27:11.03-05:00</CreationTime>
     <SituationNumber>MTA NYCT_4a78a3ec-476a-4eb8-b0b4-ef3aa509b29e</SituationNumber>
     <PublicationWindow>
       <StartTime>2017-12-16T12:05:00-05:00</StartTime>
@@ -97,15 +97,15 @@
     </Consequences>
   </PtSituationElement>
   <PtSituationElement>
-    <CreationTime>2017-12-16T20:13:01.87-05:00</CreationTime>
+    <CreationTime>2017-12-16T22:24:56.537-05:00</CreationTime>
     <SituationNumber>MTA NYCT_90d05c83-8188-4d0d-a288-eb50d94bc7aa</SituationNumber>
     <PublicationWindow>
       <StartTime>2017-12-16T09:29:00-05:00</StartTime>
     </PublicationWindow>
     <Summary xml:lang="EN">B8 westbound buses are bypassing the bus stop at Ocean Av and Foster Av because of road construction.</Summary>
     <Description xml:lang="EN">B8 westbound  bus stop closure because of road construction at Ocean Av and Foster Av.</Description>
-    <LongDescription>&lt;P&gt;&lt;STRONG&gt;B8 &lt;/STRONG&gt;westbound buses are bypassing the bus stop at Ocean Av and Foster Av because of road construction. Streets are closed in both directions because of traffic conditions. &lt;/P&gt;
-&lt;P&gt;Customer may use the bus stop at near side of Ocean Av. &lt;/P&gt;</LongDescription>
+    <LongDescription>&lt;P&gt;&lt;STRONG&gt;B8 &lt;/STRONG&gt;westbound buses are bypassing the Ocean Av and Foster Av bus stop because of road construction. Streets are closed in both directions because of traffic conditions. &lt;/P&gt;
+&lt;P&gt;&lt;STRONG&gt;Note&lt;/STRONG&gt;: Customer may use bus stop at near side of Ocean Av. &lt;/P&gt;</LongDescription>
     <Planned>false</Planned>
     <ReasonName>Service Change</ReasonName>
     <Source>
@@ -131,7 +131,7 @@
     </Consequences>
   </PtSituationElement>
   <PtSituationElement>
-    <CreationTime>2017-12-16T20:18:24.31-05:00</CreationTime>
+    <CreationTime>2017-12-16T22:27:41.32-05:00</CreationTime>
     <SituationNumber>MTA NYCT_df733397-6727-4e20-af9b-94e6d5d99b5f</SituationNumber>
     <PublicationWindow>
       <StartTime>2017-12-16T13:26:00-05:00</StartTime>
@@ -167,7 +167,7 @@
     </Consequences>
   </PtSituationElement>
   <PtSituationElement>
-    <CreationTime>2017-12-16T20:16:11.663-05:00</CreationTime>
+    <CreationTime>2017-12-16T22:26:03.69-05:00</CreationTime>
     <SituationNumber>MTA NYCT_2428fea2-a117-45f7-9fcb-48865cf9bf10</SituationNumber>
     <PublicationWindow>
       <StartTime>2017-12-16T10:41:00-05:00</StartTime>
@@ -220,7 +220,7 @@
     </Consequences>
   </PtSituationElement>
   <PtSituationElement>
-    <CreationTime>2017-12-16T20:17:39.467-05:00</CreationTime>
+    <CreationTime>2017-12-16T22:26:44.737-05:00</CreationTime>
     <SituationNumber>MTA NYCT_a8831f54-1581-4e02-b888-3305d6f7548b</SituationNumber>
     <PublicationWindow>
       <StartTime>2017-12-16T11:55:00-05:00</StartTime>
@@ -389,7 +389,7 @@
     </Consequences>
   </PtSituationElement>
   <PtSituationElement>
-    <CreationTime>2017-12-16T20:16:28.997-05:00</CreationTime>
+    <CreationTime>2017-12-16T22:26:26.637-05:00</CreationTime>
     <SituationNumber>MTABC_3df43c7d-ace0-429f-8068-3a05c97cb84a</SituationNumber>
     <PublicationWindow>
       <StartTime>2017-12-16T11:51:00-05:00</StartTime>
@@ -446,7 +446,7 @@
     </Consequences>
   </PtSituationElement>
   <PtSituationElement>
-    <CreationTime>2017-12-16T20:18:12.067-05:00</CreationTime>
+    <CreationTime>2017-12-16T22:27:27.743-05:00</CreationTime>
     <SituationNumber>MTA NYCT_11b39c3a-583a-4305-8874-a3b023c501a0</SituationNumber>
     <PublicationWindow>
       <StartTime>2017-12-16T13:23:00-05:00</StartTime>
@@ -487,7 +487,7 @@
     </Consequences>
   </PtSituationElement>
   <PtSituationElement>
-    <CreationTime>2017-12-16T20:18:38.817-05:00</CreationTime>
+    <CreationTime>2017-12-16T22:27:57.72-05:00</CreationTime>
     <SituationNumber>MTABC_d53e8507-bf20-4559-bf1c-1a816026c02a</SituationNumber>
     <PublicationWindow>
       <StartTime>2017-12-16T15:03:00-05:00</StartTime>
@@ -1169,44 +1169,6 @@
     <Consequences>
       <Consequence>
         <Condition>diverted</Condition>
-        <Severity>undefined</Severity>
-      </Consequence>
-    </Consequences>
-  </PtSituationElement>
-  <PtSituationElement>
-    <CreationTime>2017-11-29T00:00:00-05:00</CreationTime>
-    <SituationNumber>MTA NYCT_174239</SituationNumber>
-    <PublicationWindow>
-      <StartTime>2017-11-29T00:00:00-05:00</StartTime>
-      <EndTime>2018-01-06T23:59:00-05:00</EndTime>
-    </PublicationWindow>
-    <Summary xml:lang="EN">X27, X28, X37 and X38</Summary>
-    <Description xml:lang="EN">X27, X28, X37 and X38</Description>
-    <LongDescription>&lt;a class="plannedWorkDetailLink" onclick=ShowHide(174239);&gt;&lt;b&gt;X27, X28, X37 and X38 &lt;/b&gt;- &lt;b&gt;Southbound buses may experience delays on 5 Av from 57 St to 42 St&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;div id= 174239 class="plannedWorkDetail" &gt;&lt;/b&gt;Until Saturday, Jan 6, 2018&lt;br&gt;&lt;br&gt;Due to Rockefeller Center Holiday Events, please allow additional travel time.&lt;br&gt;&lt;br&gt;&lt;b&gt;Reminder&lt;/b&gt;: &lt;a href=http://web.mta.info/nyct/bus/schedule/xpress/x027cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;X27, X37&lt;/font&gt;&lt;/a&gt; and &lt;a href=http://web.mta.info/nyct/bus/schedule/xpress/x028cur.pdf target=_blank&gt;&lt;font color=#0000FF&gt;X28, X38&lt;/font&gt;&lt;/a&gt; &lt;/font&gt;buses do not operate all times.&lt;br&gt;&lt;br&gt;&lt;b&gt;          &lt;/b&gt;&lt;a href=http://bustime.mta.info/ target=_blank&gt;&lt;img height=30px src=http://web.mta.info/nyct/images/Bus_Time_logo.png&gt;&lt;/a&gt;&lt;br&gt;&lt;/div&gt;&lt;/b&gt;&lt;br/&gt;</LongDescription>
-    <Planned>true</Planned>
-    <ReasonName>Planned Work</ReasonName>
-    <Source>
-      <SourceType>directReport</SourceType>
-    </Source>
-    <Affects>
-      <VehicleJourneys>
-        <AffectedVehicleJourney>
-          <LineRef>MTA NYCT_X27</LineRef>
-          <DirectionRef>1</DirectionRef>
-        </AffectedVehicleJourney>
-        <AffectedVehicleJourney>
-          <LineRef>MTA NYCT_X28</LineRef>
-          <DirectionRef>1</DirectionRef>
-        </AffectedVehicleJourney>
-        <AffectedVehicleJourney>
-          <LineRef>MTA NYCT_X37</LineRef>
-          <DirectionRef>1</DirectionRef>
-        </AffectedVehicleJourney>
-      </VehicleJourneys>
-    </Affects>
-    <Consequences>
-      <Consequence>
-        <Condition>altered</Condition>
         <Severity>undefined</Severity>
       </Consequence>
     </Consequences>
