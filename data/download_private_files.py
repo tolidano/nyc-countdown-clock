@@ -25,22 +25,40 @@ def main(config_file):
         except (yaml.YAMLError, AttributeError):
             print('Specify mta_feed_api_key and mta_bus_time_api_key in YAML config')
 
-    subway_feed_url = 'http://datamine.mta.info/mta_esi.php?key=%KEY%&feed_id='
+    subway_feed_url = 'http://datamine.mta.info/mta_esi.php?key={}&feed_id={}'
     feed_ids = [1, 26, 16, 21, 2, 11, 31]
-    feeds = {}
+    lines = []
     for feed_id in feed_ids:
-        feeds['S' + str(feed_id)] = subway_feed_url + str(feed_id)
-
-    feeds['LIRR'] = 'https://mnorth.prod.acquia-sites.com/wse/LIRR/gtfsrt/realtime/%KEY%/json' #or proto
-    feeds['MNR'] = 'https://mnorth.prod.acquia-sites.com/wse/gtfsrtwebapi/v1/gtfsrt/%KEY%/getfeed'
-
-    feeds['BUS-TU'] = 'http://gtfsrt.prod.obanyc.com/tripUpdates?key=%KEY%'
-    feeds['BUS-POS'] = 'http://gtfsrt.prod.obanyc.com/vehiclePositions?key=%KEY%'
-    feeds['BUS-ALERTS'] = 'http://gtfsrt.prod.obanyc.com/alerts?key=%KEY%'
-
-    lines = [
-        {},
-    ]
+        lines.append({
+            'name': 'Feed {}'.format(feed_id),
+            'local': 'feed{}.gtfs'.format(feed_id),
+            'remote': subway_feed_url.format(_MTA_FEED_API_KEY, feed_id)
+        })
+    lines.append({
+        'name': 'LIRR',
+        'local': 'lirr_status.json',
+        'remote': 'https://mnorth.prod.acquia-sites.com/wse/LIRR/gtfsrt/realtime/{}/json'.format(_MTA_FEED_API_KEY)
+    })
+    lines.append({
+        'name': 'MNR',
+        'local': 'mnr_status.gtfs',
+        'remote': 'https://mnorth.prod.acquia-sites.com/wse/gtfsrtwebapi/v1/gtfsrt/{}/getfeed'.format(_MTA_FEED_API_KEY)
+    })
+    lines.append({
+        'name': 'MTA Bus Trip Updates',
+        'local': 'mta_bus_trip_updates.gtfs',
+        'remote': 'http://gtfsrt.prod.obanyc.com/tripUpdates?key={}'.format(_MTA_BUS_TIME_API_KEY)
+    })
+    lines.append({
+        'name': 'MTA Bus Vehicle Positions',
+        'local': 'mta_bus_vehicle_positions.gtfs',
+        'remote': 'http://gtfsrt.prod.obanyc.com/vehiclePositions?key={}'.format(_MTA_BUS_TIME_API_KEY)
+    })
+    lines.append({
+        'name': 'MTA Bus Alerts',
+        'local': 'mta_bus_alerts.gtfs',
+        'remote': 'http://gtfsrt.prod.obanyc.com/alerts?key={}'.format(_MTA_BUS_TIME_API_KEY)
+    })
     for line in lines:
         download(line['name'], line['local'], line['remote'])
 
