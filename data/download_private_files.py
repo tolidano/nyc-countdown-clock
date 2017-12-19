@@ -2,7 +2,6 @@ import argparse
 import os
 import requests
 import yaml
-from google.transit import gtfs_realtime_pb2
 from requests.exceptions import ConnectionError
 
 

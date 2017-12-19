@@ -64,7 +64,8 @@ def main(xml_file):
             affects.append({'line': journey.find('LineRef').text, 'direction': journey.find('DirectionRef').text})
         consequences = []
         for consequence in situation.find('Consequences'):
-            consequences.append({'condition': consequence.find('Condition').text, 'severity': consequence.find('Severity').text})
+            consequences.append({'condition': consequence.find('Condition').text,
+                                 'severity': consequence.find('Severity').text.replace('undefined', '0')})
         situations.append({
             'creation_time': creation_time,
             'situation_number': situation_number,
@@ -78,7 +79,7 @@ def main(xml_file):
             'source_type': source_type,
             'journeys': affects,
             'consequences': consequences,
-            });
+            })
     print(json.dumps(situations, indent=1))
 
 
