@@ -81,7 +81,7 @@ def main():
                 shape_len = line['properties']['shape_len']
                 coordinates = []
                 for point in line['geometry']['coordinates']:
-                    coordinates.extend(point)
+                    coordinates.append(point)
                 key = name + '|' + symbol
                 if not key in lines:
                     lines[key] = {

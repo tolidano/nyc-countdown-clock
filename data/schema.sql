@@ -1,4 +1,6 @@
-GRANT ALL PRIVILEGES ON nyctransit.* TO 'nyctransit'@'localhost' IDENTIFIED BY 'nyctransit'
+# noinspection SqlNoDataSourceInspectionForFile
+
+GRANT ALL PRIVILEGES ON nyctransit.* TO 'nyctransit'@'localhost' IDENTIFIED BY 'nyctransit';
 
 -- parse_colors
 CREATE TABLE `nyc_transit`.`colors` (
@@ -48,7 +50,7 @@ CREATE TABLE `nyc_transit`.`entrance_stations` (
   `free_crossover` TINYINT(1) NOT NULL,
   PRIMARY KEY (`station_id`));
 
-CREATE TABLE `nyc_transit`.`entrace_station_routes` (
+CREATE TABLE `nyc_transit`.`entrance_station_routes` (
   `route_id` INT NOT NULL,
   `route` VARCHAR(45) NOT NULL,
   `station_id` INT NOT NULL,
@@ -119,8 +121,33 @@ CREATE TABLE `nyc_transit`.`stations` (
   `notes` VARCHAR(250) NOT NULL,
   PRIMARY KEY (`station_id`));
 
-CREATE TABLE `nyc_transit`.`station_lines` (
+CREATE TABLE `nyc_transit`.`stations_lines` (
   `line_id` INT NOT NULL,
   `line` VARCHAR(5) NOT NULL,
   `station_id` INT NOT NULL,
   PRIMARY KEY (`line_id`));
+
+-- parse_station_lines_geojson
+CREATE TABLE `nyc_transit`.`station_lines` (
+  `line_id` INT NOT NULL,
+  `url` VARCHAR(100) NOT NULL,
+  `symbol` VARCHAR(5) NOT NULL,
+  `name` VARCHAR(5) NOT NULL,
+  PRIMARY KEY (`line_id`));
+
+CREATE TABLE `nyc_transit`.`station_line_segments` (
+  `line_segment_id` INT NOT NULL,
+  `line_id` INT NOT NULL,
+  `segment_id` VARCHAR(10) NOT NULL,
+  `object_id` VARCHAR(10) NOT NULL,
+  `length` DECIMAL(15,9) NOT NULL,
+  PRIMARY KEY (`line_segment_id`));
+
+CREATE TABLE `nyc_transit`.`station_line_segment_points` (
+  `point_id` INT NOT NULL,
+  `line_segment_id` INT NOT NULL,
+  `latitude` DECIMAL(11,8) NOT NULL,
+  `longitude` DECIMAL(11,8) NOT NULL,
+  `sequence` INT NOT NULL,
+  PRIMARY KEY (`point_id`));
+

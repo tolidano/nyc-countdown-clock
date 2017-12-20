@@ -9,7 +9,7 @@ def main():
     lirr = {'status': []}
     try:
         with open('lirr_gtfs.json', 'r') as data:
-
+            print(data)
     except IOError:
         print('lirr_gtfs.json not found.')
     print(json.dumps(lirr, indent=1))

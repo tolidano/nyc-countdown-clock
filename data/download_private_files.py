@@ -63,7 +63,7 @@ def main(config_file):
 
 
 def download(name, local_path, server_path):
-    print('File: ' + name)
+    print('File: ' + name + ' URL: ' + server_path)
     try:
         response = requests.get(server_path, stream=True)
     except ConnectionError:
