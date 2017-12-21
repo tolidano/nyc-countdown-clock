@@ -14,12 +14,30 @@ def main(file):
             data = gtfs.read()
             feed = gtfs_realtime_pb2.FeedMessage()
             feed.ParseFromString(data)
-            # https://developers.google.com/transit/gtfs-realtime/examples/trip-updates-full
             for entity in feed.entity:
                 if entity.HasField('trip_update'):
-                    print(entity)
+                    updates = []
+                    stop_time_updates = len(entity.trip_update.stop_time_update)
+                    if stop_time_updates:
+                        for update in entity.trip_update.stop_time_update:
+                            stop = {
+                                'stop_sequence': update.stop_sequence,
+                                'stop_id': update.stop_id,
+                            }
+                            if update.HasField('arrival'):
+                                stop['arrival'] = update.arrival.time
+                            if update.HasField('departure'):
+                                stop['departure'] = update.departure.time
+                            updates.append(stop)
                     info['trip_updates'].append({
-                        'start': '1',
+                        'timestamp': entity.trip_update.timestamp,
+                        'delay': entity.trip_update.delay,
+                        'vehicle_id': entity.trip_update.vehicle.id,
+                        'trip_id': entity.trip_update.trip.trip_id,
+                        'start_date': entity.trip_update.trip.start_date,
+                        'route_id': entity.trip_update.trip.route_id,
+                        'direction_id': entity.trip_update.trip.direction_id,
+                        'updates': updates,
                     })
                 elif entity.HasField('vehicle'):
                     info['vehicles'].append({
