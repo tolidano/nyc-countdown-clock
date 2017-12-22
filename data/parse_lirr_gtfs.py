@@ -3,6 +3,7 @@ import json
 
 def main():
     """
+    Note that agency and calendar are not present here but show up in the transit folder parser
     Components to this file:
     Stops - all stops in the LIRR network
         {'stop': {'stop_id': '138', 'stop_name': 'Montauk', 'stop_lat': '41.0471', 'stop_lon': '-71.95388'}}

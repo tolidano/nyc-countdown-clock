@@ -207,5 +207,34 @@ CREATE TABLE `nyc_transit`.`alert_periods` (
   `alert_period_id` INT NOT NULL,
   `alert_id` INT NOT NULL,
   `start` DATETIME NOT NULL,
-  `end` DATETIME NOT NULL
+  `end` DATETIME NOT NULL,
   PRIMARY KEY (`alert_period_id`));
+
+-- parse_lirr_gtfs and parse_transit_folder
+CREATE TABLE `nyc_transit`.`stops` (
+  `stop_id` INT NOT NULL,
+  PRIMARY KEY (`stop_id`));
+
+CREATE TABLE `nyc_transit`.`routes` (
+  `route_id` INT NOT NULL,
+  PRIMARY KEY (`route_id`));
+
+CREATE TABLE `nyc_transit`.`trips` (
+  `trip_id` INT NOT NULL,
+  PRIMARY KEY (`trip_id`));
+
+CREATE TABLE `nyc_transit`.`shapes` (
+  `shape_id` INT NOT NULL,
+  PRIMARY KEY (`shape_id`));
+
+CREATE TABLE `nyc_transit`.`stop_times` (
+  `stop_time_id` INT NOT NULL,
+  PRIMARY KEY (`stop_time_id`));
+
+CREATE TABLE `nyc_transit`.`exception_dates` (
+  `exception_date_id` INT NOT NULL,
+  PRIMARY KEY (`exception_date_id`));
+
+CREATE TABLE `nyc_transit`.`service_dates` (
+  `service_date_id` INT NOT NULL,
+  PRIMARY KEY (`service_date_id`));
