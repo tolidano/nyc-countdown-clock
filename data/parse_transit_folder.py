@@ -168,7 +168,6 @@ def main(folder):
                     'block_id': line[5],
                     'shape_id': shape_id,
                 })
-
     print(json.dumps(data, indent=1))
 
 

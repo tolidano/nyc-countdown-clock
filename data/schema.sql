@@ -213,28 +213,69 @@ CREATE TABLE `nyc_transit`.`alert_periods` (
 -- parse_lirr_gtfs and parse_transit_folder
 CREATE TABLE `nyc_transit`.`stops` (
   `stop_id` INT NOT NULL,
+  `name` VARCHAR(50) NOT NULL,
+  `description` VARCHAR(100) NOT NULL,
+  `latitude` DECIMAL(11,8) NOT NULL,
+  `longitude` DECIMAL(11,8) NOT NULL,
   PRIMARY KEY (`stop_id`));
 
 CREATE TABLE `nyc_transit`.`routes` (
   `route_id` INT NOT NULL,
+  `agency_id` VARCHAR(15) NOT NULL,
+  `short_name` VARCHAR(50) NOT NULL,
+  `name` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(500) NOT NULL,
+  `url` VARCHAR(100) NOT NULL,
+  `color` VARCHAR(10) NOT NULL,
+  `text_color` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`route_id`));
 
 CREATE TABLE `nyc_transit`.`trips` (
   `trip_id` INT NOT NULL,
+  `route_id` INT NOT NULL,
+  `service_id` VARCHAR(15) NOT NULL,
+  `trip_headsign` VARCHAR(50) NOT NULL,
+  `direction` VARCHAR(5) NOT NULL,
+  `block_id` INT NOT NULL,
+  `shape_id` INT NOT NULL,
   PRIMARY KEY (`trip_id`));
 
 CREATE TABLE `nyc_transit`.`shapes` (
   `shape_id` INT NOT NULL,
+  `latitude` DECIMAL(11, 8) NOT NULL,
+  `longitude` DECIMAL(11, 8) NOT NULL,
+  `sequence` INT NOT NULL,
+  `distance` DECIMAL(12,6) NOT NULL,
   PRIMARY KEY (`shape_id`));
 
 CREATE TABLE `nyc_transit`.`stop_times` (
   `stop_time_id` INT NOT NULL,
+  `trip_id` INT NOT NULL,
+  `arrival` DATETIME NOT NULL,
+  `departure` DATETIME NOT NULL,
+  `stop_id` INT NOT NULL,
+  `sequence` INT NOT NULL,
+  `pickup_type` VARCHAR(20) NOT NULL,
+  `drop_off_type` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`stop_time_id`));
 
 CREATE TABLE `nyc_transit`.`exception_dates` (
   `exception_date_id` INT NOT NULL,
+  `service_id` VARCHAR(20) NOT NULL,
+  `exception_date` DATE NOT NULL,
+  `type` TINYINT(1) NOT NULL,
   PRIMARY KEY (`exception_date_id`));
 
 CREATE TABLE `nyc_transit`.`service_dates` (
   `service_date_id` INT NOT NULL,
+  `service_id` VARCHAR(20) NOT NULL,
+  `monday` VARCHAR(20) NOT NULL,
+  `tuesday` VARCHAR(20) NOT NULL,
+  `wednesday` VARCHAR(20) NOT NULL,
+  `thursday` VARCHAR(20) NOT NULL,
+  `friday` VARCHAR(20) NOT NULL,
+  `saturday` VARCHAR(20) NOT NULL,
+  `sunday` VARCHAR(20) NOT NULL,
+  `start_date` DATE NOT NULL,
+  `end_date` DATE NOT NULL,
   PRIMARY KEY (`service_date_id`));
