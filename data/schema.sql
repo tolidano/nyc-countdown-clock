@@ -151,3 +151,61 @@ CREATE TABLE `nyc_transit`.`station_line_segment_points` (
   `sequence` INT NOT NULL,
   PRIMARY KEY (`point_id`));
 
+-- parse_mta_feed_gtfs.py (trip_updates)
+CREATE TABLE `nyc_transit`.`trip_updates` (
+  `update_id` INT NOT NULL,
+  `timestamp` TIMESTAMP NOT NULL,
+  `delay` INT NOT NULL,
+  `vehicle_id` VARCHAR(10) NOT NULL,
+  `trip_id` INT NOT NULL,
+  `start_date` DATE NOT NULL,
+  `route_id` INT NOT NULL,
+  `direction_id` TINYINT(1) NOT NULL,
+  PRIMARY KEY (`update_id`));
+
+CREATE TABLE `nyc_transit`.`stop_time_updates` (
+  `stop_time_update_id` INT NOT NULL,
+  `update_id` INT NOT NULL,
+  `stop_sequence` TINYINT(1) NOT NULL,
+  `stop_id` INT NOT NULL,
+  `arrival` DATETIME NOT NULL,
+  `departure` DATETIME NOT NULL,
+  PRIMARY KEY (`stop_time_update_id`));
+
+-- parse_mta_feed_gtfs.py (vehicles)
+CREATE TABLE `nyc_transit`.`vehicles` (
+  `vehicle_id` VARCHAR(10) NOT NULL,
+  `stop_id` INT NOT NULL,
+  `timestamp` TIMESTAMP NOT NULL,
+  `latitude` DECIMAL(11,8) NOT NULL,
+  `longitude` DECIMAL(11,8) NOT NULL,
+  `bearing` DECIMAL(7,4) NOT NULL,
+  `trip_id` INT NOT NULL,
+  `start_date` DATETIME NOT NULL,
+  `route_id` INT NOT NULL,
+  `direction_id` TINYINT(1) NOT NULL,
+  PRIMARY KEY (`vehicle_id`));
+
+-- parse_mta_feed_gtfs.py (alerts)
+CREATE TABLE `nyc_transit`.`alerts` (
+  `alert_id` INT NOT NULL,
+  `cause` VARCHAR(100) NOT NULL,
+  `effect` VARCHAR(100) NOT NULL,
+  `header` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`alert_id`));
+
+CREATE TABLE `nyc_transit`.`alert_entities` (
+  `alert_entity_id` INT NOT NULL,
+  `alert_id` INT NOT NULL,
+  `agency_id` VARCHAR(10) NOT NULL,
+  `route_id` INT NOT NULL,
+  `direction_id` INT NOT NULL,
+  PRIMARY KEY (`alert_entity_id`));
+
+CREATE TABLE `nyc_transit`.`alert_periods` (
+  `alert_period_id` INT NOT NULL,
+  `alert_id` INT NOT NULL,
+  `start` DATETIME NOT NULL,
+  `end` DATETIME NOT NULL
+  PRIMARY KEY (`alert_period_id`));
